@@ -1,0 +1,23 @@
+.notFound{
+  text-align: center;
+  line-height: 2;
+}
+.ntFound__titulo{
+  font-size: 30px;
+}
+.noFound__error{
+  font-size: 80px;
+}
+.noFound__item:nth-child(1){
+  color: rgb(255, 42, 0);
+}
+.noFound__item:nth-child(2){
+  color: rgb(181, 0, 181);
+}
+.noFound__item:nth-child(3){
+  color: rgb(236, 72, 127);
+}
+.noFound__link{
+  max-width: 300px;
+  margin: 0 auto;
+}

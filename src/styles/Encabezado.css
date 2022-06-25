@@ -1,0 +1,36 @@
+.header__login {
+  width: 100%;
+  height: fit-content;
+  background: var(--fondo);
+  border-bottom: 1px solid #414141;
+  color: var(--white);
+  position: static;
+}
+.header-contenedor {
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  width: fit-content;
+  height: fit-content;
+}
+.header-logo__title {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: fit-content;
+  font-family: "Cinzel", serif;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px #000000, 2px 0px #df0404, 3px 0px #ff1111,
+    -1px 0px rgb(72, 144, 238), -2px 0px rgb(51, 224, 224);
+  letter-spacing: 6px;
+}
+.logo {
+  width: 40px;
+  margin-bottom: 3px;
+}

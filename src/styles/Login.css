@@ -1,0 +1,136 @@
+:root {
+  --color-azul: #0095f6;
+  --color-white: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
+.main__card,
+.main__registrar,
+.main__play {
+  max-width: 450px;
+  margin: 0 auto;
+  height: fit-content;
+  border: 1px solid #353535;
+  padding: 30px;
+  text-align: center;
+}
+.main__link {
+  display: inline-block;
+  color: var(--color-azul);
+  font-weight: 500;
+  font-size: 17px;
+}
+.main__parrafo {
+  font-size: 14px;
+  color: #a4a4a4;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/*===== main__correo ===== */
+.main__formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+}
+.main__inputContenedor {
+  width: 100%;
+}
+.main__condiciones {
+  font-size: 14px;
+  color: rgb(158, 158, 158);
+  text-align: center;
+  line-height: 1.5;
+}
+.main__linkCondiciones {
+  color: #d8d8d8;
+}
+.login__label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.main__input {
+  padding: 10px;
+  border-radius: 3px;
+  transition: var(--transition-3s);
+  background: rgb(29, 29, 29);
+  border: 1px solid #292929;
+  color: rgb(212, 212, 212);
+}
+.main__input:focus {
+  outline: 1px solid #353535;
+}
+.main__pass {
+  color: var(--color-azul);
+  font-size: 13px;
+  margin: 10px 0;
+  text-align: center;
+}
+.main__registrar {
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.main__play {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  margin-top: 23px;
+  font-size: 15px;
+  padding: 15px;
+}
+.main__playIconos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 23px;
+}
+.main__playico {
+  max-width: 130px;
+}
+.iconos {
+  width: 20px;
+  object-fit: cover;
+}
+@media (max-width: 480px) {
+  .main__registrar {
+    flex-direction: column;
+  }
+}
+@media (max-width: 320px) {
+  .main__card,
+  .main__registrar,
+  .main__play {
+    padding: 20px;
+  }
+}
