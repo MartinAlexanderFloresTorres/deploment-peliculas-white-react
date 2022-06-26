@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Spiner from "../components/Spiner";
+import "../styles/SpinerImg.css"
 
 function Overview() {
   const { id } = useParams();
@@ -57,7 +58,7 @@ function Overview() {
                   alt="movie"
                   onLoad={() => setCargado(false)}
                 />
-                {cargado && <div className="lds-dual-ring"></div>}
+                {cargado && <div className="spinner"></div>}
               </div>
             )}
             <div className="post__bottom">
@@ -106,7 +107,7 @@ function Overview() {
                         onLoad={() => setCargadoCompani(false)}
                       />
                       {cargadoCompani && (
-                        <div className="lds-dual-ring lsd-dos"></div>
+                        <div className="spinner"></div>
                       )}
                     </div>
                   )}
