@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Spiner from "../components/Spiner";
-import "../styles/SpinerImg.css"
+import "../styles/SpinerImg.css";
 
-function Overview() {
+function Overview({ title }) {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
   const [spiner, setSpiner] = useState(false);
   const [cargado, setCargado] = useState(true);
   const [cargadoCompani, setCargadoCompani] = useState(true);
+
+  useEffect(() => {
+    document.title = title;
+  }, []);
 
   useEffect(() => {
     const consultarApi = async () => {
@@ -106,9 +110,7 @@ function Overview() {
                         alt="compania"
                         onLoad={() => setCargadoCompani(false)}
                       />
-                      {cargadoCompani && (
-                        <div className="spinner"></div>
-                      )}
+                      {cargadoCompani && <div className="spinner"></div>}
                     </div>
                   )}
               </div>

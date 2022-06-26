@@ -1,15 +1,25 @@
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/Login.css";
 
-function Registrarse() {
-  const navigate = useNavigate()
+function Registrarse({ title }) {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = title;
+  }, []);
 
   return (
     <section className="max-width">
       <section className="user__correo" id="user-correo">
         <div className="main__card">
           <div className="main__correo">
-            <form className="main__formulario" onSubmit={(e) => {e.preventDefault(), navigate("/login")}}>
+            <form
+              className="main__formulario"
+              onSubmit={(e) => {
+                e.preventDefault(), navigate("/login");
+              }}
+            >
               <legend>Crear cuenta</legend>
               <p className="main__parrafo">
                 Regístrate para ver fotos y vídeos de tus amigos.

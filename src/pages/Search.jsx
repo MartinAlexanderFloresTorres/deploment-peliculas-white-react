@@ -4,12 +4,16 @@ import Spiner from "../components/Spiner";
 import Movie from "../components/Movie";
 let consultarApi;
 
-function Search() {
+function Search({ title }) {
   const [spiner, setSpiner] = useState(false);
   const [movies, setMovies] = useState([]);
   const [pagina, setPagina] = useState(1);
   const [totalPaginas, setTotalPaginas] = useState(1);
   const [busquedad, setBusquedad] = useState("");
+
+  useEffect(() => {
+    document.title = title;
+  }, []);
 
   useEffect(() => {
     consultarApi = async (busquedad) => {
@@ -23,7 +27,7 @@ function Search() {
           const objeto = {
             id: mov.id,
             title: mov.title,
-            poster_path: mov.poster_path
+            poster_path: mov.poster_path,
           };
           return objeto;
         });

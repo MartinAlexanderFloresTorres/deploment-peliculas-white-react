@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import imgd1 from "../img/footerstore1.png";
 import imgd2 from "../img/footerstore2.png";
 import "../styles/Login.css";
 
-function Login() {
+function Login({title}) {
+  useEffect(() => {
+    document.title = title
+  },[])
+
   const navigate = useNavigate()
   return (
     <section className="max-width">

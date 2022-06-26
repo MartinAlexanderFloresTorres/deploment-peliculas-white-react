@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/Login.css";
 
-function NuevoPassword() {
+function NuevoPassword({ title }) {
   const navigate = useNavigate();
+  useEffect(() => {
+    document.title = title;
+  }, []);
 
   return (
     <section className="max-width">

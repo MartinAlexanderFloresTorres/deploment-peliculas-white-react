@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Encabezado from "../layouts/Encabezado";
 
-function NotFound() {
+function NotFound({title}) {
+  useEffect(() => {
+    document.title = title
+  },[])
+
   return (
     <>
       <Encabezado />
